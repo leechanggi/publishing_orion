@@ -765,13 +765,28 @@ h4 {
 }
 //PC1200(1200px~1920px)
 @media (min-width: 1200px) and (max-width: 1920px) {
+}
+//Tablet && PC1200(768~1920px)
+@media (min-width: 768px) and (max-width: 1920px) {
   #header {
     width: 100%;
     .gnb-wrap {
       width: 100%;
+      .gnb {
+        width: 100%;
+        > ul > li > a {
+          ::before {
+            width: 7.5%;
+          }
+        }
+      }
     }
   }
+  #container {
+    width: 100%;
+  }
 }
+
 //Tablet(768~1199px)
 @media (min-width: 768px) and (max-width: 1199px) {
 }
