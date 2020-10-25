@@ -185,6 +185,23 @@ h4 {
     width: 100%;
     height: 100%;
     position: relative;
+    > div{
+      a{
+        position: absolute;
+        top: 10.52083333333333vw;
+        z-index: 2;
+        &:nth-child(1){
+          left: 15.05208333333333vw;
+        }
+        &:nth-child(2){
+          right: 15.05208333333333vw;
+        }
+        > img{
+          width: 1.5625vw;
+          height: 3.645833333333333vw;
+        }
+      } 
+    }
     > ul[class ^= main-visual-img] {
       > li {
         position: relative;
@@ -287,7 +304,8 @@ h4 {
               left: 0;
               border-radius: 50%;
               display: none;
-              background: url(../image/main/opacity_img_plus.png) no-repeat 50% 50%;
+              background: url(../image/main/opacity_img_plus.png) no-repeat 0 0;
+              background-size: cover;
             }
           }
           &:last-child {
@@ -914,6 +932,23 @@ h4 {
   }
   #container{
     > .main-visual{
+      > div{
+        a{
+          position: absolute;
+          top: 14.97395833333333vw;
+          z-index: 2;
+          &:nth-child(1){
+            left: 1.302083333333333vw;
+          }
+          &:nth-child(2){
+            right: 1.302083333333333vw;
+          }
+          > img{
+            width: 3.90625vw;
+            height: 9.114583333333333vw;
+          }
+        } 
+      }
       >.main-visual-img{
         display: none;
       }
@@ -933,8 +968,8 @@ h4 {
       }
     }
     > .row1-wrap{
-      width: 100%;
-      height: 121.09375vw;
+      width: 100vw;
+      height: 123.6979166666667vw;
       padding-top: 5.208333333333333vw;
       padding-left: 5.208333333333333vw;
       > .row1{
@@ -960,8 +995,8 @@ h4 {
                 height: 36.84895833333333vw;
               }
               &::after{
-                width: 36.97916666666667vw;
-                height: 36.97916666666667vw;
+                width: 36.84895833333333vw;
+                height: 36.84895833333333vw;
               }
             }
             > p{
@@ -1358,32 +1393,32 @@ h4 {
           > li{
             padding-right: 2.604166666666667vw;
             &::after{
-              top: 4px;
-              left: 68px;
-              height: 16px;
+              top: 0.5208333333333333vw;
+              left: 8.854166666666667vw;
+              height: 2.083333333333333vw;
               background-color: #ccc;
             }
             &:nth-child(2) {
               &::after {
-                left: 133px;
+                left: 17.31770833333333vw;
               }
             }
           }
         }
         > .address {
-          padding-top: 50px;
-          padding-left: 70px;
+          padding-top: 6.510416666666667vw;
+          padding-left: 9.114583333333333vw;
           width: 100%;
           height: 100%;
-          font-size: 14px;
+          font-size: 1.822916666666667vw;
           > p {
-            padding-top: 30px;
+            padding-top: 3.90625vw;
           }
         }
         .footer-logo {
           position: absolute;
-          top: 40px;
-          right: 70px;
+          top: 5.208333333333333vw;
+          right: 9.114583333333333vw;
         }
       }
     }
