@@ -146,7 +146,7 @@ h4 {
   border: 1px solid #ccc;
   padding: 10px;
   display: none;
-  z-index: 1;
+  z-index: 3;
 }
 
 #header .header-top-wrap .header-top .lang-wrap > ul > li {
@@ -181,7 +181,7 @@ h4 {
   border: 1px solid #ccc;
   padding: 10px;
   display: none;
-  z-index: 1;
+  z-index: 3;
 }
 
 #header .header-top-wrap .header-top .user-wrap > ul > li {
@@ -231,10 +231,17 @@ h4 {
 }
 
 #header .gnb-wrap {
-  width: 1920px;
+  position: absolute;
+  top: 130px;
+  left: 0;
+  width: 100vw;
+  height: 450px;
   margin: 0 auto;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  background: linear-gradient(white 70px, rgba(255, 255, 255, 0.5) 70px, rgba(255, 255, 255, 0.5));
+  overflow: hidden;
+  z-index: 2;
 }
 
 #header .gnb-wrap .gnb {
@@ -244,38 +251,52 @@ h4 {
   margin: 0 auto;
 }
 
-#header .gnb-wrap .gnb > ul > li {
+#header .gnb-wrap .gnb > ul > .gnb-li {
   position: relative;
   display: block;
   float: left;
   width: 25%;
-  height: 40px;
+  height: 70px;
+  line-height: 70px;
   text-align: center;
 }
 
-#header .gnb-wrap .gnb > ul > li > a {
+#header .gnb-wrap .gnb > ul > .gnb-li > a {
   font-size: 1.25vw;
+  font-weight: bold;
 }
 
-#header .gnb-wrap .gnb > ul > li > a:hover::before {
+#header .gnb-wrap .gnb > ul > .gnb-li > a:hover::before {
   display: block;
 }
 
-#header .gnb-wrap .gnb > ul > li > a::before {
+#header .gnb-wrap .gnb > ul > .gnb-li > a::before {
   position: absolute;
   content: "";
   width: 4.6875vw;
-  height: 2px;
+  height: 3px;
   background-color: #ed1b29;
-  bottom: -0.625vw;
+  bottom: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   display: none;
 }
 
-#header .gnb-wrap .gnb > ul > li > ul {
-  display: none;
+#header .gnb-wrap .gnb > ul > .gnb-li > ul > li > a {
+  display: block;
+  height: 2.604166666666667vw;
+  line-height: 2.604166666666667vw;
+  font-weight: bold;
+  font-size: 1.041666666666667vw;
+}
+
+#header .gnb-wrap .gnb > ul > .gnb-li > ul > li > a:first-child {
+  font-family: "Red Hat Display", "AppleGothic", sans-serif;
+}
+
+#header .gnb-wrap .gnb > ul > .gnb-li > ul > li > a:hover {
+  color: #ed1b29;
 }
 
 #header .menu-shape {
@@ -285,6 +306,7 @@ h4 {
 #container {
   width: 1920px;
   margin: 0 auto;
+  margin-top: 70px;
 }
 
 #container .main-visual {

@@ -49,7 +49,7 @@ h4 {
           border: 1px solid #ccc;
           padding: 10px;
           display: none;
-          z-index: 1;
+          z-index: 3;
           > li {
             line-height: normal;
             display: block;
@@ -81,7 +81,7 @@ h4 {
           border: 1px solid #ccc;
           padding: 10px;
           display: none;
-          z-index: 1;
+          z-index: 3;
           > li {
             line-height: normal;
             display: block;
@@ -131,25 +131,34 @@ h4 {
     }
   }
   .gnb-wrap {
-    width: 1920px;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 100vw;
+    height: 450px;
     margin: 0 auto;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    background: linear-gradient(white 70px, rgba(255,255,255,0.5) 70px, rgba(255,255,255,0.5));
+    overflow: hidden;
+    z-index: 2;
     .gnb {
       width: 1200px;
       height: 70px;
       line-height: 70px;
       margin: 0 auto;
       > ul {
-        > li {
+        > .gnb-li {
           position: relative;
           display: block;
           float: left;
           width: 25%;
-          height: 40px;
+          height: 70px;
+          line-height: 70px;
           text-align: center;
           > a {
             font-size: 1.25vw;
+            font-weight: bold;
             &:hover {
               &::before {
                 display: block;
@@ -159,16 +168,30 @@ h4 {
               position: absolute;
               content: "";
               width: 4.6875vw;
-              height: 2px;
+              height: 3px;
               background-color: $mainColor-1;
-              bottom: -0.625vw;
+              bottom: 0;
               left: 50%;
               transform: translateX(-50%);
               display: none;
             }
           }
-          > ul {
-            display: none;
+          > ul{
+            > li{
+              >a{
+                display: block;
+                height: 2.604166666666667vw;
+                line-height: 2.604166666666667vw;
+                font-weight: bold;
+                font-size: 1.041666666666667vw;
+                &:first-child{
+                  font-family: "Red Hat Display", "AppleGothic", sans-serif;
+                }
+                &:hover{
+                  color: $mainColor-1;
+                }
+              }
+            }
           }
         }
       }
@@ -181,6 +204,7 @@ h4 {
 #container {
   width: 1920px;
   margin: 0 auto;
+  margin-top: 70px;
   .main-visual {
     width: 100%;
     height: 100%;
