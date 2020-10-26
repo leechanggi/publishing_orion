@@ -137,8 +137,8 @@ h4 {
     border-bottom: 1px solid #ccc;
     .gnb {
       width: 1200px;
-      height: 70px;
-      line-height: 70px;
+      height: 3.645833333333333vw;
+      line-height: 3.645833333333333vw;
       margin: 0 auto;
       > ul {
         > li {
@@ -146,29 +146,54 @@ h4 {
           display: block;
           float: left;
           width: 25%;
-          height: 40px;
+          height: 3.645833333333333vw;
+          line-height: 3.645833333333333vw;
           text-align: center;
+          &::before {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 3px;
+            background-color: $mainColor-1;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+            -webkit-transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+          }
+          &:hover {
+            &::before {
+              width: 100%;
+            }
+            > ul {
+              display: block;
+            }
+          }
           > a {
             font-size: 1.25vw;
-            &:hover {
-              &::before {
-                display: block;
-              }
-            }
-            &::before {
-              position: absolute;
-              content: "";
-              width: 4.6875vw;
-              height: 2px;
-              background-color: $mainColor-1;
-              bottom: -0.625vw;
-              left: 50%;
-              transform: translateX(-50%);
-              display: none;
-            }
           }
           > ul {
             display: none;
+            position: absolute;
+            top: 3.645833333333333vw;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            z-index: 3;
+            > li {
+              height: 3.125vw;
+              line-height: 3.125vw;
+              > a {
+                width: 100%;
+                height: 3.125vw;
+                line-height: 3.125vw;
+                font-size: 0.9375vw;
+                &:hover {
+                  color: $mainColor-1;
+                  font-weight: bold;
+                }
+              }
+            }
           }
         }
       }
@@ -626,6 +651,7 @@ h4 {
   }
 }
 #footer {
+  position: relative;
   width: 1920px;
   height: 570px;
   margin: 0 auto;
@@ -837,6 +863,14 @@ h4 {
         right: 0;
       }
     }
+  }
+  > .btn-top {
+    width: 3.333333333333333vw;
+    height: 3.333333333333333vw;
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    z-index: 9999;
   }
 }
 //PC1200(1200px 이상 PC버전 최적화)
@@ -1249,6 +1283,7 @@ h4 {
   #footer {
     width: 100%;
     height: 100.2604166666667vw;
+    position: relative;
     > .footer-section-1 {
       width: 100%;
       height: 68.359375vw;
@@ -1517,5 +1552,9 @@ h4 {
     > .footer-logo {
       display: none;
     }
+  }
+  .btn-top {
+    width: 8.344198174706649vw !important;
+    height: 8.344198174706649vw !important;
   }
 }
