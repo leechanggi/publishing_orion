@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/sub_1.min.css">
+    <link rel="stylesheet" href="css/sub_1.css">
     <title>오리온 | 자주 묻는 질문</title>
 </head>
 <body>
     <header id="header">
+        <p class="skip-menu"><a href="#container">본문 바로가기</a></p>
         <h1 class="logo">
             <a href="#"><img src="./image/common/logo.png" alt="오리온"></a>
         </h1>
@@ -41,7 +42,14 @@
                 </div>
             </div>
         </div>
-        <div class="gnb-wrap">
+        <a href="#gnb-wrap" class="nav-img">
+            <p>
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+        </a>
+        <div class="gnb-wrap" id="gnb-wrap">
             <div class="gnb">
                 <ul>
                     <li><a href="#">브랜드</a>
@@ -49,7 +57,7 @@
                             <li><a href="#">Chocopie House</a></li>
                             <li><a href="#">Market O</a></li>
                             <li><a href="#">Dr. you</a></li>
-                            <li><a href="#">Jeju-youngamsoo</a></li>
+                            <li><a href="#">제주 용암수</a></li>
                         </ul>
                     </li>
                     <li><a href="#">회사소개</a>
@@ -78,18 +86,22 @@
                         </ul>
                     </li>
                 </ul>
+                <p class="btn-menu-close"><a href="#"></a></p>
             </div>
+            <div class="dim"></div>
         </div>
     </header>
-    <contain id="container">
-        <div class="bg-header-title">
-            <img src="./image/sub1/office.png" alt="질문">
+    <div id="container">
+        <div class="container-header">
             <h2>자주묻는질문</h2>
-            <span>고객 여러분의 궁금증을 해소하여 드리겠습니다.</span>
-            <p>HOME  /  고객센터  /  자주 묻는 질문<a href="#"><img src="./image/sub1/btn-more.png" alt="더보기"></a></p>  
+            <p>고객 여러분의 궁금증을 해소하여 드리겠습니다.</p>
         </div>
-        <div class="contents">
-            <div class="board-wrap">
+        <div class="container-menu">
+            <p>HOME  /  고객센터  /  자주 묻는 질문</p>
+            <a href="#"><img src="./image/sub1/btn-more.png" alt=""></a>
+        </div>
+        <div class="contents-wrap">
+            <div class="search_bar">
                 <form action="#" method="get">
                     <select name="sch-option" id="sch-option">
                         <option value="all">전체</option>
@@ -103,158 +115,170 @@
                     <input type="submit" value="검색">
                 </form>
             </div>
-            <p class="info-1">총 999건</p>
-            <div class="scroll-wrap">
-                <table class="table-basic-st-1">
-                    <caption>자주묻는질문</caption>
-                    <colgroup>
-                        <col style="width: 81px;">
-                        <col style="width: 121px;">
-                        <col style="width: 998px;">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">No.</th>
-                            <th scope="col">구분</th>
-                            <th scope="col">내용</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>제품</td>
-                            <td>
-                                <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn_more"></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>표기</td>
-                            <td>
-                                <a href="#">소비자가격이 표시가 별도 없는데, 표시해야 하는 것 아닌가요?</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn_more"></a>
-                            </td>
-                        <tr>
-                            <td>3</td>
-                            <td>기타</td>
-                            <td>
-                                <a href="#">오리온과 제품관련하여 협업하고 싶어요.</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn_more"></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>제품</td>
-                            <td>
-                                <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn_more"></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>제품</td>
-                            <td>
-                                <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn_more"></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>제품</td>
-                            <td>
-                                <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn_more"></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>제품</td>
-                            <td>
-                                <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn_more"></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>제품</td>
-                            <td>
-                                <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn_more"></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>제품</td>
-                            <td>
-                                <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn_more"></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>제품</td>
-                            <td>
-                                <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn_more"></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="list_more">
-                <a href="#" class="btn_list_more"></a>    
-                <p>리스트 더보기(1/10)</p>
+            <div class="contents">
+                <p>총 999건</p>
+                <div class="board-wrap">
+                    <table class="board-table">
+                        <caption>자주묻는질문</caption>
+                        <colgroup>
+                            <col style="width: 81px;">
+                            <col style="width: 121px;">
+                            <col style="width: 998px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">구분</th>
+                                <th scope="col">내용</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>제품</td>
+                                <td>
+                                    <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn_more"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>표기</td>
+                                <td>
+                                    <a href="#">소비자가격이 표시가 별도 없는데, 표시해야 하는 것 아닌가요?</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn_more"></a>
+                                </td>
+                            <tr>
+                                <td>3</td>
+                                <td>기타</td>
+                                <td>
+                                    <a href="#">오리온과 제품관련하여 협업하고 싶어요.</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn_more"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>제품</td>
+                                <td>
+                                    <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn_more"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>제품</td>
+                                <td>
+                                    <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn_more"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>제품</td>
+                                <td>
+                                    <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn_more"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>제품</td>
+                                <td>
+                                    <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn_more"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>제품</td>
+                                <td>
+                                    <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn_more"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>제품</td>
+                                <td>
+                                    <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn_more"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>제품</td>
+                                <td>
+                                    <a href="#">이물질이 들어 있는것 같은데, 어떻게 하나요?</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn_more"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="list_more">
+                    <a href="#" class="btn_list_more">
+                        <img src="./image/sub1/btn-more-2.png" alt="더보기">
+                    </a>
+                    <p>리스트 더보기(1/10)</p>
+                </div>
             </div>
         </div>
-    </contain>
+    </div>
     <footer id="footer">
         <div class="footer-section-1">
             <div class="footer-section-1-wrap">
-                <div class="left">
-                    <h4>주가정보</h4>
-                    <div class="up">
-                    <!-- <div class="down"> -->
-                        <p>126,500</p>
-                        <ul>
-                            <li><em>전일대비</em>-1,500</li>
-                            <li><em>등락율</em>-1.17%</li>
-                        </ul>
+                <div class="left-wrap">
+                    <div class="left">
+                        <h4>주가정보</h4>
+                        <div class="up">
+                        <!-- <div class="down"> -->
+                            <p>126,500</p>
+                            <ul>
+                                <li><em>전일대비</em>-1,500</li>
+                                <li><em>등락율</em>-1.17%</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="center">
-                    <h4>고객센터</h4>
-                    <p><em>080 523 5700</em><br>월~금요일 09:00 ~ 17:00<br>점심시간 12:00 ~ 13:00</p>
+                <div class="center-wrap">
+                    <div class="center">
+                        <h4>고객센터</h4>
+                        <img src="./image/main/call_img.png" alt="고객센터">
+                        <p><em>080 523 5700</em><br>월~금요일 09:00 ~ 17:00<br>점심시간 12:00 ~ 13:00</p>
+                    </div>
                 </div>
-                <div class="right">
-                    <h4>SNS</h4>
-                    <div class="sns-wrap">
-                        <ul>
-                            <li><a href="#"><img src="./image/common/footer_img-1.png" alt="네이버 블로그 바로가기"></a></li>
-                            <li><a href="#"><img src="./image/common/footer_img-2.png" alt="인스타그램 바로가기"></a></li>
-                            <li><a href="#"><img src="./image/common/footer_img-3.png" alt="유튜브 바로가기"></a></li>
-                            <li><a href="#"><img src="./image/common/footer_img-4.png" alt="페이스북 바로가기"></a></li>
-                        </ul>
+                <div class="right-wrap">
+                    <div class="right">
+                        <h4>SNS</h4>
+                        <div class="sns-wrap">
+                            <ul>
+                                <li><a href="#"><img src="./image/common/footer_img-1.png" alt="네이버 블로그 바로가기"></a></li>
+                                <li><a href="#"><img src="./image/common/footer_img-2.png" alt="인스타그램 바로가기"></a></li>
+                                <li><a href="#"><img src="./image/common/footer_img-3.png" alt="유튜브 바로가기"></a></li>
+                                <li><a href="#"><img src="./image/common/footer_img-4.png" alt="페이스북 바로가기"></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -275,6 +299,9 @@
                     <a href="#"><img src="./image/common/footer-logo.png" alt="오리온"></a>
                 </div>
             </div>
+        </div>
+        <div class="btn-top">
+            <a href="#header"><img src="./image/main/arrow-top-img.png" alt="상단 바로가기"></a>
         </div>
     </footer>
 </body>
