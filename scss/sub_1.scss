@@ -582,13 +582,13 @@ h4 {
 }
 
 // 반응형 //
-// PC1200(1200px 이상 pc버전 최적화)
+// PC1200(1200px pc 적용)
 @media (min-width: 1200px) {
   #container {
     width: 100%;
   }
 }
-// Mobile & Tablet & PC1200(360~)
+// Mobile & Tablet & PC1200(360~ 모바일, 테블릿, pc 공통)
 @media (min-width: 360px) {
   body {
     width: 100%;
@@ -609,9 +609,6 @@ h4 {
   }
   #container {
     width: 100%;
-    .container-header {
-      width: 100%;
-    }
   }
   #footer {
     width: 100%;
@@ -627,8 +624,8 @@ h4 {
     }
   }
 }
-// Mobile & Tablet(360~1199 모바일, 테블릿 버전 최적화)
-@media (min-width: 360px) and (max-width: 1199px) {
+// Mobile & Tablet(360~1199 모바일, 테블릿 공통)
+@media (min-width: 768px) and (max-width: 1199px) {
   body {
     width: 100%;
   }
@@ -641,7 +638,6 @@ h4 {
     padding-left: 2.083333333333333vw;
     padding-top: 2.5vw;
   }
-
   #header {
     position: relative;
     .logo {
@@ -650,9 +646,6 @@ h4 {
     .header-top-wrap {
       display: none;
     }
-    // > #gnb-wrap {
-    //   display: none;
-    // }
     .nav-img {
       display: block;
       position: relative;
@@ -1077,9 +1070,9 @@ h4 {
     }
   }
 }
-// Mobile(360~767 모바일 버전 최적화)
+// Mobile(360~767 only모바일 적용)
 @media (min-width: 360px) and (max-width: 767px) {
-  header {
+  #header {
     h1 {
       margin: 2.607561929595828vw auto !important;
       width: 26.07561929595828vw !important;

@@ -16,6 +16,7 @@ h4 {
   padding-left: 1.302083333333333vw;
   padding-top: 1.5625vw;
 }
+//1920px 기준 PC 적용//
 #header {
   width: 100%;
   margin: 0 auto;
@@ -130,11 +131,17 @@ h4 {
       }
     }
   }
+  .nav-img {
+    text-indent: -9999px;
+  }
   .gnb-wrap {
     width: 1920px;
     margin: 0 auto;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    .gnb-icon-wrap {
+      display: none;
+    }
     .gnb {
       width: 62.5%;
       height: 3.645833333333333vw;
@@ -232,7 +239,7 @@ h4 {
       > li {
         position: relative;
         display: block;
-        width: 100vw;
+        width: 100%;
         height: 100%;
         margin: 0 auto;
         &:nth-child(2) {
@@ -451,15 +458,6 @@ h4 {
           margin-right: 1.822916666666667vw;
           height: 20.83333333333333vw;
           width: 16.82291666666667vw;
-          > a {
-            img {
-              transition: 0.5s;
-              cursor: pointer;
-              &:hover {
-                transform: scale(1.1);
-              }
-            }
-          }
           > p {
             display: block;
             position: absolute;
@@ -835,7 +833,8 @@ h4 {
     z-index: 4;
   }
 }
-//PC1200(1200px 이상 PC버전 최적화)
+//반응형//
+//PC(1200px~ PC 적용)
 @media (min-width: 1200px) {
   #container {
     width: 100%;
@@ -846,7 +845,7 @@ h4 {
     }
   }
 }
-//Mobile && Tablet && PC1200(360~)
+//Mobile && Tablet && PC1200(360px~ 모바일, 테블릿, PC공통)
 @media (min-width: 360px) {
   body {
     width: 100%;
@@ -901,7 +900,7 @@ h4 {
     }
   }
 }
-//Mobile && Tablet(360~1199px 모바일, 테블릿 버전 최적화)
+//Mobile && Tablet(360~1199px 모바일, 테블릿 공통)
 @media (min-width: 360px) and (max-width: 1199px) {
   body {
     width: 100%;
@@ -923,9 +922,6 @@ h4 {
     .header-top-wrap {
       display: none;
     }
-    // > #gnb-wrap {
-    //   display: none;
-    // }
     .nav-img {
       display: block;
       position: relative;
@@ -953,22 +949,77 @@ h4 {
     #gnb-wrap:target {
       left: 0px;
     }
-    // #gnb-wrap {
-    //   display: none;
-    // }
     .gnb-wrap {
       position: absolute;
       left: -9999px;
       top: -4.166666666666667vw;
-      width: 700vw;
+      width: 100vw;
       border: none;
       z-index: 98;
+      > .gnb-icon-wrap {
+        position: relative;
+        display: block;
+        clear: both;
+        z-index: 101;
+        font-size: 1.333333333333333vw;
+        text-align: center;
+        .gnb-lang-wrap {
+          float: left;
+          position: absolute;
+          top: 2.916666666666667vw; //35px
+          left: 66.66666666666667vw; //800px
+          z-index: 101;
+          a {
+            width: 4.166666666666667vw; //50px
+            height: 4.166666666666667vw; //50px
+            > img {
+              width: 4.166666666666667vw; //50px
+              height: 4.166666666666667vw; //50px
+            }
+          }
+          // ul class = 'on' display : block //
+          ul {
+            width: 6.666666666666667vw;
+            height: 6.666666666666667vw;
+            border: 1px solid #000;
+            background-color: #fff;
+            display: none;
+          }
+        }
+        .gnb-user-wrap {
+          float: left;
+          top: 2.916666666666667vw;
+          left: 75vw;
+          position: absolute;
+          z-index: 101;
+          a {
+            width: 4.166666666666667vw; //50px
+            height: 4.166666666666667vw; //50px
+            > img {
+              width: 4.166666666666667vw; //50px
+              height: 4.166666666666667vw; //50px
+            }
+          }
+          // ul class = 'on' display : block //
+          ul {
+            width: 6.666666666666667vw;
+            height: 8.333333333333333vw;
+            border: 1px solid #000;
+            background-color: #fff;
+            display: none;
+            li {
+              height: 2.5vw;
+              line-height: 2.5vw;
+            }
+          }
+        }
+      }
       > .gnb {
         position: absolute;
         top: 0;
         left: 0;
         width: 89.66666666666667vw;
-        height: 700vw;
+        height: 580vw;
         line-height: normal;
         background-color: #fff;
         z-index: 99;
@@ -977,8 +1028,9 @@ h4 {
           position: absolute;
           width: 16.66666666666667vw;
           height: 3.666666666666667vw;
-          background: url(../image/common/logo.png) no-repeat 0 0;
+          background: url(../image/common/logo.png) round 50% 50%;
           background-size: cover;
+          background-repeat: no-repeat;
           top: 1.666666666666667vw;
           left: 3.333333333333333vw;
         }
@@ -1056,6 +1108,7 @@ h4 {
           width: 4.166666666666667vw;
           height: 4.166666666666667vw;
           z-index: 99;
+          text-indent: -9999px;
           > a {
             display: block;
             position: absolute;
@@ -1096,7 +1149,7 @@ h4 {
         right: 0;
         top: 0;
         width: calc(100% - 89.66666666666667vw);
-        height: 700vw;
+        height: 580vw;
         z-index: 98;
         background-color: rgba(0, 0, 0, 0.9);
       }
@@ -1602,136 +1655,155 @@ h4 {
     }
   }
 }
-//Mobile(360~768 모바일 버전 최적화)
+//Mobile(360~768px 모바일 적용)
 @media (min-width: 360px) and (max-width: 767px) {
-  header {
-    h1 {
+  #header {
+    .logo {
       margin: 2.607561929595828vw auto !important;
       width: 26.07561929595828vw !important;
       height: 5.736636245110821vw !important;
       line-height: 5.736636245110821vw !important;
     }
-  }
-  .main-visual-img_tm {
-    > li {
-      > p {
-        top: 33.33% !important;
-        left: 50% !important;
-        > em {
-          font-size: 2.868318122555411vw !important;
-          &::after {
-            width: 6.51890482398957vw !important;
-            height: 2.998696219035202vw !important;
+    .nav-img {
+      top: -5.555555555555556vw !important;
+    }
+    .gnb {
+      &::before {
+        width: 27.77777777777778vw !important;
+        height: 6.111111111111111vw !important;
+        top: 2.777777777777778vw !important;
+        left: 1.388888888888889vw !important;
+        background-size: cover !important;
+        background-repeat: no-repeat;
+      }
+      > ul {
+        > li {
+          height: 5.215123859191656vw !important; //40px
+          line-height: 5.215123859191656vw !important; //40px
+          top: 0;
+          > a {
+            font-size: 3.129074315514993vw !important; //24px
           }
-        }
-        > i {
-          display: none;
-        }
-      }
-    }
-  }
-  .row1-wrap {
-    height: 143.4159061277705vw !important;
-    p {
-      > em {
-        margin-bottom: 0 !important;
-      }
-      > br {
-        display: none !important;
-      }
-    }
-  }
-  .sub-visual {
-    overflow: hidden;
-    margin-left: 7.551760104302477vw !important;
-    > li {
-      margin-right: 2.477183833116037vw !important;
-      width: 42vw !important;
-      &:last-child {
-        display: none;
-      }
-      > a {
-        > img {
-          width: 42.1875vw;
-          height: 42.1875vw;
-        }
-      }
-      > p {
-        top: 90%;
-        font-size: 2.083333333333333vw;
-        width: 42.1875vw;
-      }
-    }
-  }
-  .footer-section-2-wrap {
-    > ul {
-      display: none;
-    }
-    > .address {
-      padding-top: 0 !important;
-      padding-left: 0 !important;
-      > address {
-        display: none;
-      }
-      p {
-        padding: 0 !important;
-        margin: 0 !important;
-        text-align: center;
-        height: 31.94263363754889vw;
-        line-height: 31.94263363754889vw;
-        font-size: 3.129074315514993vw;
-        font-family: "Red Hat Display", "AppleGothic", sans-serif;
-      }
-    }
-    > .footer-logo {
-      display: none;
-    }
-  }
-  .btn-top {
-    width: 8.344198174706649vw !important;
-    height: 8.344198174706649vw !important;
-  }
-  .gnb {
-    > ul {
-      > li {
-        height: 5.215123859191656vw !important; //40px
-        line-height: 5.215123859191656vw !important; //40px
-        > a {
-          font-size: 3.129074315514993vw !important; //24px
-        }
-        &:nth-child(2) {
-          top: 32.59452411994785vw !important; //250px
-        }
-        &:nth-child(3) {
-          top: 58.67014341590613vw !important; //450px
-        }
-        &:nth-child(4) {
-          top: 78.22685788787484vw !important; //600px
-        }
-        &::before {
-          height: 1px !important;
-        }
+          &:nth-child(1) {
+            top: 13.03780964797914vw; //100px
+          }
+          &:nth-child(2) {
+            top: 32.59452411994785vw !important; //250px
+          }
+          &:nth-child(3) {
+            top: 58.67014341590613vw !important; //450px
+          }
+          &:nth-child(4) {
+            top: 78.22685788787484vw !important; //600px
+          }
+          &::before {
+            height: 1px !important;
+          }
 
-        > ul {
-          > li {
-            height: 5.215123859191656vw !important; //40px
-            > a {
-              font-size: 2.086049543676662vw !important; //16px
-              height: 6.51890482398957vw !important; //50px
-              line-height: 6.51890482398957vw !important; //50px
-              text-indent: 3.911342894393742vw; //30px
-              font-size: 2.086049543676662vw !important; //16px
-              &::before {
-                top: 3.259452411994785vw !important;
-                left: 3.259452411994785vw !important;
-                width: 0.5215123859191656vw !important;
-                height: 0.5215123859191656vw !important;
-                border-radius: 0.2607561929595828vw !important;
+          > ul {
+            > li {
+              height: 5.215123859191656vw !important; //40px
+              > a {
+                font-size: 2.086049543676662vw !important; //16px
+                height: 6.51890482398957vw !important; //50px
+                line-height: 6.51890482398957vw !important; //50px
+                text-indent: 3.911342894393742vw; //30px
+                font-size: 2.086049543676662vw !important; //16px
+                &::before {
+                  top: 3.259452411994785vw !important;
+                  left: 3.259452411994785vw !important;
+                  width: 0.5215123859191656vw !important;
+                  height: 0.5215123859191656vw !important;
+                  border-radius: 0.2607561929595828vw !important;
+                }
               }
             }
           }
         }
       }
+    }
+  }
+  #container {
+    .main-visual-img_tm {
+      > li {
+        > p {
+          top: 33.33% !important;
+          left: 50% !important;
+          > em {
+            font-size: 2.868318122555411vw !important;
+            &::after {
+              width: 6.51890482398957vw !important;
+              height: 2.998696219035202vw !important;
+            }
+          }
+          > i {
+            display: none;
+          }
+        }
+      }
+    }
+    .row1-wrap {
+      height: 143.4159061277705vw !important;
+      p {
+        > em {
+          margin-bottom: 0 !important;
+        }
+        > br {
+          display: none !important;
+        }
+      }
+    }
+    .sub-visual {
+      overflow: hidden;
+      margin-left: 7.551760104302477vw !important;
+      > li {
+        padding-right: 2.477183833116037vw !important;
+        width: 42vw !important;
+        &:last-child {
+          display: none;
+        }
+        > a {
+          > img {
+            width: 42.1875vw;
+            height: 42.1875vw;
+          }
+        }
+        > p {
+          top: 90%;
+          font-size: 2.083333333333333vw;
+          width: 42.1875vw;
+        }
+      }
+    }
+  }
+  #footer {
+    .footer-section-2-wrap {
+      > ul {
+        display: none;
+      }
+      > .address {
+        padding-top: 0 !important;
+        padding-left: 0 !important;
+        > address {
+          display: none;
+        }
+        p {
+          padding: 0 !important;
+          margin: 0 !important;
+          text-align: center;
+          height: 31.94263363754889vw;
+          line-height: 31.94263363754889vw;
+          font-size: 3.129074315514993vw;
+          font-family: "Red Hat Display", "AppleGothic", sans-serif;
+        }
+      }
+      > .footer-logo {
+        display: none;
+      }
+    }
+    .btn-top {
+      width: 8.344198174706649vw !important;
+      height: 8.344198174706649vw !important;
     }
   }
 }

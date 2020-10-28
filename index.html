@@ -13,7 +13,7 @@
 <body>
     <header id="header">
         <p class="skip-menu"><a href="#container">본문 바로가기</a></p>
-        <h1 class="logo">
+        <h1 class="logo" id="logo">
             <a href="#"><img src="./image/common/logo.png" alt="오리온"></a>
         </h1>
         <div class="header-top-wrap">
@@ -45,16 +45,34 @@
                 </div>
             </div>
         </div>
-        <a href="#gnb-wrap" class="nav-img">
+        <a href="#gnb-wrap" class="nav-img" id="nav-img">
             <p>
+                전체메뉴 바로가기
                 <span></span>
                 <span></span>
                 <span></span>
             </p>
         </a>
         <div class="gnb-wrap" id="gnb-wrap">
-            <div class="gnb">
-                <ul>
+            <div class="gnb-icon-wrap">
+                <div class="gnb-lang-wrap">
+                    <a href="#" class="lang"><img src="./image/common/gnb-lang-icon.png" alt="언어선택"></a>
+                    <ul class="on">
+                        <li><a href="#">한국어</a></li>
+                        <li><a href="#">ENGLISH</a></li>
+                    </ul>
+                </div>
+                <div class="gnb-user-wrap">
+                    <a href="#" class="user"><img src="./image/common/gnb-user-icon.png" alt="회원메뉴"></a>
+                    <ul class="on">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">마이페이지</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gnb" id="gnb">
+                <ul class="gnb__ul">
                     <li><a href="#">브랜드</a>
                         <ul>
                             <li><a href="#">Chocopie House</a></li>
@@ -89,7 +107,7 @@
                         </ul>
                     </li>
                 </ul>
-                <p class="btn-menu-close"><a href="#"></a></p>
+                <p class="btn-menu-close"><a href="#">메뉴 닫기</a></p>
             </div>
             <div class="dim"></div>
         </div>
@@ -173,7 +191,7 @@
             <div class="row2">
                 <h2>오리온 홍보 CF</h2>
                 <div class="youtube-wrap">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9EUMYzJWLaY" frameborder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9EUMYzJWLaY" frameborder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="오리온 홍보 CF">이 브라우저는 iframe을 지원하지 않습니다.</iframe>
                 </div>
                 <div class="row2-right">
                     <h3>
